@@ -1,0 +1,253 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=PT+Serif:wght@400;700&family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --ptSerif-font: 'PT Serif', serif;
+  --poppins-font: 'Poppins', sans-serif;
+  --montserrat-font:'Montserrat', sans-serif;
+  --black: #000;
+  --grey:#a9a9a9;
+}
+
+main {
+  min-height: 100vh;
+  width: 80%;
+  margin: 3rem auto 0;
+}
+
+/*  --------header section --------------------- */
+
+.heading-section {
+  display: flex;
+  min-height: 25vh;
+  padding: 1rem;
+}
+.heading-section h1 {
+  width: 60%;
+  padding: 1rem;
+  color: var(--black);
+  font-family: var(--ptSerif-font);
+  font-size: 2.3rem;
+  font-weight: 700;
+}
+.description {
+  width: 40%;
+  line-height: 2;
+  color: var(--black);
+  font-family: var(--poppins-font);
+  font-size: 1.2rem;
+  font-weight: 400;
+  line-height: normal;
+}
+.description p {
+  margin: 1rem 0;
+}
+
+/* ------------images container----------- */
+
+.images-container {
+  min-height: calc(100vh - 25vh);
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: repeat(6, auto);
+  column-gap: 5px;
+  padding: 3rem 1rem;
+}
+
+.image-section {
+  width: 100%;
+  position: relative;
+  margin-left: 2rem;
+}
+.image-section .image {
+  width: 70%;
+  min-height: 80%;
+}
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.images-container .title {
+  position: absolute;
+  transform: rotate(90deg);
+  text-transform: capitalize;
+  width: 80%;
+}
+
+.images-container h3 {
+  color: var(--black);
+  font-family: var(--poppins-font);
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 2;
+}
+.images-container .box-1 {
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+.box-1 .title {
+  right: -18%;
+  top: 34%;
+}
+.images-container .box-2 {
+  grid-column: 2/3;
+  grid-row: 2/4;
+}
+.box-2 .title {
+  right: -17%;
+  top: 35%;
+}
+.images-container .box-3 {
+  grid-column: 3/4;
+  grid-row: 1/3;
+}
+.box-3 .title {
+  right: -17%;
+  top: 35%;
+}
+.images-container .box-4 {
+  grid-column: 1/2;
+  grid-row: 4/6;
+}
+.box-4 .title {
+  right: -17%;
+  top: 36%;
+}
+.images-container .box-5 {
+  grid-column: 2/3;
+  grid-row: 5/7;
+}
+.box-5 .title {
+  right: -16%;
+  top: 35%;
+}
+.images-container .box-6 {
+  grid-column: 3/4;
+  grid-row: 4/6;
+}
+.box-6 .title {
+  right: -17%;
+  top: 36%;
+}
+/*-------------- footer----------- */
+footer {
+  height: 5vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color:var(--grey);
+  font-family:var(--montserrat-font);
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 1rem 0;
+}
+
+footer .username {
+  font-weight: 700;
+  text-decoration-line: underline;
+  padding-inline: 0.2rem;
+}
+
+@media screen and (max-width: 768px) {
+
+  .heading-section h1 {
+    font-size: 2rem;
+  }
+  .description {
+    font-size: 1rem;
+  }
+  .image-section {
+    margin-left:1rem;
+  }
+  .images-container .title {
+    font-size: 0.8rem;
+  }
+  .images-container h3 {
+    font-size: 1rem;
+  }
+
+  
+}
+
+@media screen and (max-width: 530px) {
+  html {
+    font-size: 14px;
+  }
+  main {
+    width: 95%;
+  }
+  .heading-section {
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .heading-section h1 {
+    width: 100%;
+    padding: 0;
+    font-size: 2rem;
+  }
+  .description {
+    width: 100%;
+  }
+  .image-section {
+    margin-left: 1rem;
+  }
+  .images-container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: repeat(10, auto);
+    column-gap: 0px;
+    padding: 1rem 0;
+  }
+  .images-container h3 {
+    font-size: 1rem;
+  }
+  .images-container .box-3 {
+    grid-column: 1/2;
+    grid-row: 4/6;
+  }
+  .images-container .box-4 {
+    grid-column: 2/3;
+    grid-row: 5/7;
+  }
+  .images-container .box-5 {
+    grid-column: 1/2;
+    grid-row: 7/9;
+  }
+  .images-container .box-6 {
+    grid-column: 2/3;
+    grid-row: 8/10;
+  }
+  .box-1 .title {
+    right: -18%;
+    top: 36%;
+  }
+  .box-2 .title {
+    right: -17%;
+    top: 36%;
+  }
+  .box-3 .title {
+    right: -17%;
+    top: 36%;
+  }
+  .box-4 .title {
+    right: -18%;
+    top: 36%;
+  }
+  .box-5 .title {
+    right: -17%;
+    top: 35%;
+  }
+  .box-6 .title {
+    right: -16%;
+    top: 35%;
+  }
+}
